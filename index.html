@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        body {
+            margin:0!important;
+            padding:0!important;
+            background-color: #fafafa!important;
+        }
+        header {
+            background-color: #742c8c!important;
+          
+            
+        }
+        .nav-link {
+            color:white;
+           
+        }
+
+        .nav-link:hover {
+           color: white !important;;
+           
+        }
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        border-radius: 0%;
+        background-color: transparent ;
+        text-decoration: underline 1px;
+        border-color: white;
+        }
+        .section {
+            background-color: #ffffff;
+        }
+
+        .application {
+            box-shadow: 1px 1px 2px 2px #888888;
+        }
+        .colleges {
+            box-shadow: 1px 1px 2px 2px #888888;
+        }
+        tbody {
+            background-color: #fefcea;
+        }
+        thead {
+            background-color: #f2f9fe;
+        }
+        tbody, td, tfoot, th, thead, tr {
+            border: none!important;
+        }
+
+
+
+ .purchase-section {
+background-color: transparent!important;
+        }
+        :root {
+  --field-border: 1px solid #EEEEEE;
+  --accent-color: #2962FF;
+  --sidebar-color: #F1F1F1;
+  --secondary-text: #aaaaaa;
+  --radius-sm: .25em;
+  --radius-md: .50em;
+}
+
+* { box-sizing: border-box; }
+
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-fill {
+  display: flex;
+  flex: 1 1;
+}
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
+.flex-vertical-center {
+  display: flex;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.p-sm  { padding: .5em; }
+.pl-sm { padding-left: .5em; }
+.pr-sm { padding-right: .5em; }
+.pb-sm { padding-bottom: .5em; }
+.p-md  { padding: 1em; }
+.pb-md { padding-bottom: 1em; }
+.p-lg  { padding: 2em; }
+.m-md  { margin: 1em; }
+.size-md { font-size: .85em; }
+.size-lg { font-size: 1.5em; }
+.size-xl { font-size: 2em; }
+.half-width { width: 50%; }
+
+.pointer { cursor: pointer; }
+.uppercase{ text-transform: uppercase; }
+.ellipsis { text-overflow: ellipsis; overflow: hidden; }
+
+.f-main-color { color: #2962FF; }
+.f-secondary-color { color: var(--secondary-text); }
+.b-main-color { background: var(--accent-color); }
+.numbers::-webkit-outer-spin-button,
+.numbers::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+.screen {
+  
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: #E3F2FD;
+}
+
+.popup {
+  position: relative;
+  width: 50em;
+  height: 40em;
+  background: #FFFFFF;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.popup .close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #FCFCFC;
+  border-bottom-left-radius: var(--radius-sm);
+  transition: background-color .25s ease-in-out;
+}
+.popup .close-btn:hover {
+  background: #EF5350;
+}
+.header {
+  padding-bottom: 1em;
+}
+.sidebar {
+  width: 16.5em;
+  padding-left: 2em;
+  padding-top: 5em;
+}
+
+.header .title {
+  font-size: 1.2em;
+}
+.header .title span {
+  font-weight: 300;
+}
+
+.card-data > div {
+  padding-bottom: 1.5em;
+}
+.card-data > div:first-child {
+  padding-top: 1.5em;
+}
+
+.card-property-title {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  margin-right: 0.5em;
+}
+.card-property-title strong {
+  padding-bottom: .5em;
+  font-size: .85em;
+}
+.card-property-title span {
+  color: var(--secondary-text);
+  font-size: .75em;
+}
+.card-property-value {
+  flex: 1 1;
+}
+
+.card-number {
+  background: #fafafa;
+  border: var(--field-border);
+  border-radius: var(--radius-md);
+  padding: .5em 1em;
+}
+.card-number-field * { line-height: 1; margin: 0; padding: 0;}
+.card-number-field input { 
+  width: 3em;
+  height: 100%;
+  padding: .5em 0;
+  margin: 0 .75em;
+  border: none;
+  color: #888888;
+  background: transparent;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.timer span {
+  background: #311B92;
+  color: #FFFFFF;
+  width: 1.2em;
+  padding: 4px 0;
+  display: inline-block;
+  text-align: center;
+  border-radius: var(--radius-sm);
+}
+.timer span+span {
+    margin-left: 2px;
+}
+.timer em {
+  font-style: normal;
+}
+
+.action button {
+  padding: 1.1em;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  font-size: 1em;
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-md);
+  transition: background-color .2s ease-in-out;
+}
+.action button:hover {
+  background: #2979FF;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 3em;
+  overflow: hidden;
+  border: var(--field-border);
+  border-radius: var(--radius-md);
+}
+.input-container input, 
+.input-container i {
+  line-height: 1;
+}
+.input-container input {
+  flex: 1 1;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-weight: 800;
+  font-size: .85em;
+}
+.input-container input:focus {
+  background: #E3F2FD;
+  color: #283593;
+}
+.input-container input::placeholder {
+  color: #ddd;
+}
+.input-container input::-webkit-outer-spin-button,
+.input-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-container i {
+
+  right: 0.5em;
+}
+
+.purchase-section {
+  position: relative;
+  overflow: visible;
+  padding: 0 1em 1em 1em;
+  background: var(--sidebar-color);
+  border-top-left-radius: .8em;
+  border-top-right-radius: .8em;
+}
+.purchase-section:before {
+  content: '';
+
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  left: -0.8em;
+  bottom: -0.8em;
+  background: #FFFFFF;
+}
+.purchase-section:after {
+  content: '';
+
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  right: -0.8em;
+  bottom: -0.8em;
+  background: #FFFFFF;
+}
+
+.card-mockup {
+  position: relative;
+  margin: -5em 1em 1.5em 1em;
+  padding: 1.5em 1.2em;
+  height: 15em;
+  border-radius: var(--radius-md);
+  background: #FFFFFF;
+  box-shadow: 0 .5em 1em .125em rgba(0,0,0, 0.1);
+}
+
+
+.card-mockup:after {
+  content: '';
+  position: absolute;
+  width: 25%;
+  top: -.2em;
+  left: 37.5%;
+  height: .2em;
+  background: #2a689c;
+  border-top-left-radius: .2em;
+  border-top-right-radius: .2em;
+}
+.card-mockup:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 25%;
+  left: 37.5%;
+  height: 0.5em;
+  background: #2962ff36;
+  border-bottom-left-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  box-shadow: 0 2px 15px 5px #2962ff4d;
+}
+
+.purchase-props {
+  margin: 0;
+  padding: 0;
+  font-size: .8em;
+  width: 100%;
+}
+.purchase-props li {
+  width: 100%;
+  line-height: 2.5;
+}
+.purchase-props li span {
+  color: var(--secondary-text);
+  font-weight: 600;
+}
+
+.separation-line {
+  border-top: 1px dashed #aaa;
+  margin: 0 .8em;
+}
+
+.total-section {
+  position: relative;
+  overflow: hidden;
+  
+  padding: 1em;
+  background: var(--sidebar-color);
+  border-bottom-left-radius: .8em;
+  border-bottom-right-radius: .8em;
+}
+.total-section:before {
+  content: '';
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  left: -0.8em;
+  top: -0.8em;
+  background: #FFFFFF;
+}
+.total-section:after {
+  content: '';
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  right: -0.8em;
+  top: -0.8em;
+  background: #FFFFFF;
+}
+.total-label {
+  font-size: 0.8em;
+  padding-bottom: 0.5em;
+}
+.total-section strong {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+.total-section small {
+  font-weight: 600;
+}
+    </style>
+</head>
+<body>
+
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <div href="/" class="d-flex align-items-center  mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <div class="px-3 p-1 nav-link" ><b>CollegeBoard</b></div>
+            <div class="p-1 nav-link"><b>CSS Profiler</b></div>
+          </div>
+        
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link" >Privacy Policy</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active">Dashboard</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+          </ul>
+        </header>
+   
+
+        <div class="container p-5 section" style="max-width: 810px; margin: auto;">
+            <div class="pb-2">
+            <h5 style="margin-bottom: 5px;"><b>Dashboard</b> </h5>
+            <p style="margin-bottom: 5px;">Welcome Leonardo Melendez Lahura</p>
+            <p style="margin-bottom: 5px;">Academic <b>Year 2023-24</b> </p>
+            <p>Your CBFinAid ID: <b>HAAFK2I</b></p>
+            </div>
+            
+            <div class="container p-4 application">
+                <h5><b>Application Status</b></h5>
+                <p>Application Completed</p>
+                <button class="btn btn-primary" style="background-color: #2a689c;border: none;color: white!important;">Documents uploaded 
+                    <i class="fa fa-check"></i></button>
+            
+
+
+            </div>
+            <br>
+            <div class="container colleges p-4 table-responsive">
+                <h5><b>Colleges & Programs</b></h5>
+                <table class="table">
+                    <thead>
+                      <tr class="tr-head">
+                        <th scope="col">Institution Name <i class="fa fa-info-circle"></i> <br><br></th>
+                        <th scope="col">CSS CODE<br><br></th>
+                        <th scope="col">Submission Date<br><br></th>
+                        <th scope="col">Correction Date<br><br></th>
+                        <th scope="col">Correction Priority Filing Date <i class="fa fa-info-circle"></i> </th>
+                        <th scope="col">Correction Priority Filing Date Information</th>
+                        <th scope="col" rowspan="3">Award Letter Date <i class="fa fa-info-circle"></i> <br></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Harvard College</td>
+                        <td>3434</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td> <a href=""> Click for details</a></td>
+                        <td></td>
+
+                        
+                  
+                      </tr>
+                      <tr>
+                        <td>Standford University</td>
+                        <td>4704</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href=""> Click for details</a></td>
+                        <td rowspan="3">04/01/2023</td>  
+                      
+                        
+                      </tr>
+                      <tr>
+                        <td>Univ of Pennsylvania</td>
+                        <td>2933</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href=""> Click for details</a></td>                    
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <br>
+        </div>
+        <br><br>
+    
+
+
+
+
+
+        <div class="screen flex-center" >
+
+          
+            
+            <form class="popup flex p-lg" style="margin-top: 100px;margin-bottom: 100px;">  
+                   
+                <br>
+                <br>
+              <div class="close-btn pointer flex-center p-sm">
+                
+                <i class="ai-cross"></i>
+   
+    </div>
+              
+                <!-- CARD FORM -->
+                <div class="flex-fill flex-vertical">
+                    
+                  <div class="header flex-between flex-vertical-center">
+
+                    <h3>Payment Form</h3>
+
+                   
+                    <div class="flex-vertical-center">
+                        <div class="alert alert-danger" id="alertfailed" role="alert">
+                           Payment failed! Your card is not in our records.
+                          </div>
+                      <i class="ai-bitcoin-fill size-xl pr-sm f-main-color"></i>
+            
+                    </div>
+                   
+                  </div>
+                  <div class="card-data flex-fill flex-vertical">
+                    
+                    <!-- Card Number -->
+                    <div class="flex-between flex-vertical-center">
+                      <div class="card-property-title">
+                        <strong>Card Number</strong>
+                        <span>Enter 16-digit card number on the card</span>
+                      </div>
+                      
+                    </div>
+                    
+                    <!-- Card Field -->
+                    <div class="flex-between">
+                      <div class="card-number flex-vertical-center flex-fill">
+                        <div class="card-number-field flex-vertical-center flex-fill">
+                          
+                          
+          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="24px" height="24px"><path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"/><path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"/><path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"/></svg>
+                          
+                          
+                          
+    
+          
+                          <input class="numbers" type="number" min="1" max="9999" placeholder="0000">-
+                          <input class="numbers" type="number" placeholder="0000">-
+                          <input class="numbers" type="number" placeholder="0000">-
+                          <input class="numbers" type="number" placeholder="0000" data-bound="carddigits_mock" data-def="0000">
+                        </div>
+                        <i class="ai-circle-check-fill size-lg f-main-color"></i>
+                      </div>
+                    </div>
+                    
+                    <!-- Expiry Date -->
+                    <div class="flex-between">
+                      <div class="card-property-title">
+                        <strong>Expiry Date</strong>
+                        <span>Enter the expiration date of the card</span>
+                      </div>
+                      <div class="card-property-value flex-vertical-center">
+                        <div class="input-container half-width">
+                          <input class="numbers" data-bound="mm_mock" data-def="00" type="number" min="1" max="12" step="1" placeholder="MM">  
+                        </div>
+                        <span class="m-md">/</span>
+                        <div class="input-container half-width">
+                          <input class="numbers" data-bound="yy_mock" data-def="01" type="number" min="23" max="99" step="1" placeholder="YY">
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- CCV Number -->
+                    <div class="flex-between">
+                      <div class="card-property-title">
+                        <strong>CVC Number</strong>
+                        <span>Enter card verification code from the back of the card</span>
+                      </div>
+                      <div class="card-property-value">
+                        <div class="input-container">
+                          <input id="cvc" type="password">
+                          <i id="cvc_toggler" data-target="cvc" class="ai-eye-open pointer"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Name -->
+                    <div class="flex-between">
+                      <div class="card-property-title">
+                        <strong>Cardholder Name</strong>
+                        <span>Enter cardholder's name</span>
+                      </div>
+                      <div class="card-property-value">
+                        <div class="input-container">
+                          <input id="name" data-bound="name_mock" data-def="Mr. Cardholder" type="text" class="uppercase" placeholder="CARDHOLDER NAME">
+                          <i class="ai-person"></i>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                  </div>
+                  <div class="action flex-center">
+                    <button  type="button" id="paynow" style="background-color: #2a689c;" class="b-main-color pointer">Pay Now</button>
+                  </div>
+                </div>
+              
+                <!-- SIDEBAR -->
+                <div class="sidebar flex-vertical">
+                  <div>
+                  
+                  </div>
+                  <div class="purchase-section flex-fill flex-vertical">
+                    
+                    <div class="card-mockup flex-vertical">
+                      <div class="flex-fill flex-between">
+                        <img class="img-fluid" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+                      </div>
+                      <div>
+                      
+                        <div class="size-md pb-md pt-4">
+                       
+                        <div id="name_mock" class="size-md pb-sm uppercase ellipsis"> Leonardo Melendez Lahura</div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                    
+                    <ul class="purchase-props">
+                      <li class="flex-between">
+                        <span>Payment number</span>
+                        <strong>429252965</strong>
+                      </li>
+                      <li class="flex-between">
+                        <span>Payment</span>
+                        <strong>$1,200.00</strong>
+                      </li>
+
+                      <li class="flex-between">
+                        <span>Total</span>
+                        <strong>$1,200.00</strong>
+                      </li>
+                    </ul>
+                  </div>
+                 
+             
+            </d>
+          </div>
+          
+
+
+
+<script>
+    
+    document.getElementById('alertfailed').style.display = 'none';
+    const btn = document.getElementById("paynow");
+    btn.addEventListener("click", payment);
+
+    function payment() {
+     
+        document.getElementById('alertfailed').style.display = '';
+       
+    }
+
+</script>
+
+</body>
+</html>
